@@ -181,7 +181,7 @@ export default function EditorPage() {
 
   return (
     <div className="editor-page">
-      <Toaster position="top-right" />
+      <Toaster position="top-center" reverseOrder={false} />
       <Header />
 
       {/* Dynamic greeting */}
@@ -210,7 +210,7 @@ export default function EditorPage() {
           onClick={handleSuggestTitles}
           disabled={isSuggesting}
         >
-          {isSuggesting ? <span className="spinner"></span> : "Suggest Titles"}
+          {isSuggesting ? "Suggesting Title..." : "Suggest Titles"}
         </button>
         {suggestions.length > 0 && (
           <ul className="suggestions-list">
@@ -245,33 +245,23 @@ export default function EditorPage() {
               onClick={handleGenerateContent}
               disabled={isGenerating}
             >
-              {isGenerating ? (
-                <span className="spinner"></span>
-              ) : (
-                "Generate Content"
-              )}
+              {isGenerating ? "Generating Content..." : "Generate Content"}
             </button>
             <button
               className="btn"
               onClick={handleGenerateSummary}
               disabled={isSummarizing}
             >
-              {isSummarizing ? (
-                <span className="spinner"></span>
-              ) : (
-                "Generate Summary"
-              )}
+              {isSummarizing ? "Generating Summary..." : "Generate Summary"}
             </button>
             <button
               className="btn"
               onClick={handleCheckGrammar}
               disabled={isCorrecting}
             >
-              {isCorrecting ? (
-                <span className="spinner"></span>
-              ) : (
-                "Check Grammar & Spelling"
-              )}
+              {isCorrecting
+                ? "Checking Grammar & Spelling..."
+                : "Check Grammar & Spelling"}
             </button>
           </div>
 
