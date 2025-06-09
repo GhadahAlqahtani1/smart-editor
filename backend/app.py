@@ -8,7 +8,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://smart-editor-ten.vercel.app"])
+
 
 # ========================
 # 1. إعداد الـ API KEY
