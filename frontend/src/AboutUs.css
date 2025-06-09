@@ -1,0 +1,393 @@
+/* AboutUs.css */
+
+/*────────────────────────────────────────────────────
+  0. Reuse Design Tokens
+────────────────────────────────────────────────────*/
+:root {
+  --blue-dark:    #0D1B2A;
+  --blue-medium:  #1B263B;
+  --blue-accent:  #415A77;
+  --blue-light:   #778DA9;
+  --blue-lighter: #E0E1DD;
+  --gray-900:     #1A1A1A;
+  --gray-600:     #555555;
+  --white:        #FFFFFF;
+}
+
+/*────────────────────────────────────────────────────
+  1. Page Container
+────────────────────────────────────────────────────*/
+.about-page {
+  background: var(--blue-lighter);
+  color: var(--gray-900);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+/*────────────────────────────────────────────────────
+  2. Hero / Journey Section
+────────────────────────────────────────────────────*/
+.about-hero {
+  background: var(--white);
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  text-align: center;
+}
+.about-hero h1 {
+  font-size: clamp(2rem,5vw,3rem);
+  font-weight: 700;
+  color: var(--blue-dark);
+  margin-bottom: 1rem;
+}
+.about-hero p {
+  font-size: clamp(1rem,2.5vw,1.125rem);
+  color: var(--gray-600);
+  margin: 0 auto 2rem;
+  max-width: 700px;
+}
+.about-hero-img {
+  width: 100%;
+  border-radius: 0.75rem;
+  margin-bottom: 2rem;
+}
+.stats-row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.stats-row div {
+  text-align: center;
+  min-width: 120px;
+}
+.stats-row div strong {
+  display: block;
+  font-size: 2rem;
+  color: var(--blue-accent);
+}
+.stats-row div span {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--gray-600);
+  font-size: 0.9rem;
+}
+
+/*────────────────────────────────────────────────────
+  3. What Defines Us (Tabs)
+────────────────────────────────────────────────────*/
+.defines-us {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+.defines-us h2 {
+  font-size: clamp(1.75rem,4vw,2.25rem);
+  font-weight: 600;
+  color: var(--blue-dark);
+  margin-bottom: 1.5rem;
+}
+.tabs {
+  display: inline-flex;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.tabs button {
+  background: var(--white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: var(--blue-dark);
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+.tabs button.active {
+  background: var(--blue-accent);
+  color: var(--white);
+}
+.tab-content {
+  margin: 1.5rem 0 2rem;
+  font-size: 1rem;
+  color: var(--gray-600);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.primary-btn {
+  background: var(--blue-accent);
+  color: var(--white);
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+/*────────────────────────────────────────────────────
+  4. Path to Smarter Interactions (Video)
+────────────────────────────────────────────────────*/
+.path-section {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+.path-section h2 {
+  font-size: clamp(1.75rem,4vw,2.25rem);
+  font-weight: 600;
+  color: var(--blue-dark);
+  margin-bottom: 2rem;
+}
+.video-wrapper {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+.video-wrapper img {
+  width: 100%;
+  border-radius: 0.75rem;
+}
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--white);
+  color: var(--blue-accent);
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/*────────────────────────────────────────────────────
+  5. FAQ Section
+────────────────────────────────────────────────────*/
+.faq-section {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+}
+.faq-section h2 {
+  font-size: clamp(1.75rem,4vw,2.25rem);
+  font-weight: 600;
+  color: var(--blue-dark);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.faq-list {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+.faq-item {
+  border-bottom: 1px solid var(--gray-100);
+}
+.faq-item .question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1rem 0;
+  font-size: 1rem;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--blue-dark);
+  cursor: pointer;
+}
+.faq-item .icon {
+  font-size: 1.25rem;
+}
+.faq-item .answer {
+  padding: 0.5rem 0 1rem;
+  color: var(--gray-600);
+  font-size: 0.95rem;
+}
+
+a.secondary-btn {
+  display: inline-block;
+  text-decoration: none !important;
+}
+
+
+/*────────────────────────────────────────────────────
+  6. Testimonials
+────────────────────────────────────────────────────*/
+.testimonials {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+.testimonials h2 {
+  font-size: clamp(1.75rem,4vw,2.25rem);
+  font-weight: 600;
+  color: var(--blue-dark);
+  margin-bottom: 2rem;
+}
+.testimonial-card {
+  background: var(--white);
+  max-width: 500px;
+  margin: 0 auto 1rem;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.testimonial-card .avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+}
+.testimonial-card blockquote {
+  font-style: italic;
+  color: var(--gray-600);
+  margin-bottom: 1rem;
+}
+.testimonial-card .author {
+  color: var(--blue-dark);
+  font-weight: 500;
+}
+.next-testimonial {
+  background: none;
+  border: none;
+  color: var(--blue-accent);
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/*────────────────────────────────────────────────────
+  7. Call to Action
+────────────────────────────────────────────────────*/
+.about-cta {
+  background: linear-gradient(135deg, var(--blue-medium), var(--blue-light));
+  color: var(--white);
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  max-width: 1200px;
+  margin: 4rem auto;
+}
+.about-cta h2 {
+  font-size: clamp(2rem,5vw,3rem);
+  margin-bottom: 1rem;
+}
+.about-cta p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+.about-cta .primary-btn {
+  background: var(--white);
+  color: var(--blue-accent);
+}
+
+/*────────────────────────────────────────────────────
+  8. Footer
+────────────────────────────────────────────────────*/
+.about-footer {
+  background: var(--blue-dark);
+  color: var(--white);
+  padding: 2rem 1rem;
+  font-size: 0.875rem;
+}
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+.footer-links div h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+.footer-links div a {
+  display: block;
+  color: var(--white);
+  text-decoration: none;
+  margin-bottom: 0.25rem;
+}
+.about-footer p {
+  text-align: center;
+}
+
+.secondary-btn {
+  background: transparent;
+  color: var(--blue-accent);
+  border: 2px solid var(--blue-accent);
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  margin-top: 1rem;
+}
+
+.secondary-btn:hover {
+  background: var(--blue-accent);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+
+/*────────────────────────────────────────────────────
+  9. Responsive (max-width: 768px)
+────────────────────────────────────────────────────*/
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 2rem 1rem;
+    margin: 2rem 1rem;
+  }
+  .stats-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .defines-us,
+  .path-section,
+  .faq-section,
+  .testimonials,
+  .about-cta {
+    margin: 2rem 1rem;
+    padding: 2rem 1rem;
+  }
+  .tabs {
+    flex-direction: column;
+    width: 100%;
+  }
+  .tabs button {
+    width: 100%;
+    text-align: center;
+  }
+  .video-wrapper {
+    max-width: 100%;
+  }
+  .play-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+  .primary-btn {
+    width: 100%;
+  }
+}

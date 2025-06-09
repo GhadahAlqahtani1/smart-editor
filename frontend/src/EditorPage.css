@@ -1,0 +1,324 @@
+:root {
+  --blue-lighter: #f4f9fd;
+  --blue-accent: #4178c0;
+  --gray-100: #e2e8f0;
+  --gray-300: #cfd8dc;
+  --gray-600: #64748b;
+  --gray-900: #181f2c;
+  --white: #fff;
+}
+
+/* Page container */
+.editor-page {
+  background: var(--blue-lighter);
+  color: var(--gray-900);
+  padding-bottom: 4rem;
+  min-height: 100vh;
+}
+
+/* Title Section */
+.title-section {
+  max-width: 900px;
+  margin: 2.5rem auto 1.5rem;
+  padding: 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+.title-input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  font-size: 1.05rem;
+  border: 2px solid var(--gray-100);
+  border-radius: 0.5rem;
+  background: var(--white);
+}
+.suggestions-list {
+  list-style: none;
+  margin-top: 0.5rem;
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  width: 100%;
+}
+.suggestions-list li {
+  padding: 0.6rem 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.suggestions-list li:hover {
+  background: var(--blue-lighter);
+}
+
+/* Editor Grid */
+.editor-grid.one-column {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  gap: 2rem;
+}
+.content-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Unified textarea style */
+.ai-textarea {
+  width: 100%;
+  min-height: 140px;
+  padding: 1rem;
+  font-size: 1.08rem;
+  border: 2px solid var(--gray-100, #e2e8f0);
+  border-radius: 0.5rem;
+  background: #f9fbfc;
+  font-family: inherit;
+  margin-bottom: 0.25rem;
+  resize: vertical;
+  color: var(--gray-900);
+}
+
+/* Status Bar */
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+  font-size: 0.93rem;
+  color: var(--gray-600);
+}
+
+/* Content Actions */
+.content-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; 
+  gap: 0.8rem;
+  margin: 1.4rem 0 2.1rem 0;  
+}
+
+
+/* Generated Content Block */
+.generated-content-box {
+  margin: 1.2rem 0;
+  padding: 1rem;
+  background: #eef6fd;
+  border-radius: 0.5rem;
+  border: 1.5px solid #a5c9f7;
+  box-shadow: 0 1.5px 8px rgba(74,144,226,0.07);
+}
+.generated-content-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* تبدأ من اليسار */
+  gap: 0.7rem; /* مسافة بين كل عنصر */
+  font-weight: 600;
+  color: #295485;
+  margin-bottom: 0.5rem;
+}
+
+.generated-content-header .btn,
+.generated-content-header .copy-btn {
+  margin: 0;        /* ألغي أي margin سابق */
+  min-width: 0;     /* ألغي أي min-width لو في كود آخر */
+  padding: 0.44rem 1.05rem;
+  font-size: 0.97rem;
+}
+
+.generated-content-body {
+  font-size: 1.08rem;
+  line-height: 1.6;
+  color: #203040;
+  white-space: pre-line;
+}
+
+/* Labels */
+.output-label {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 1.2rem;
+  color: #4178c0;
+  display: block;
+  margin-bottom: 0.23rem;
+}
+
+.output-corrections-list li {
+  padding: 0.35em 0;
+  font-family: inherit;
+  font-size: 0.97em;
+}
+
+/* Buttons */
+.btn {
+  background: var(--blue-accent);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  margin-right:5px;
+}
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+}
+.btn.small-btn {
+  padding: 0.4rem 1.1rem;
+  font-size: 0.97rem;
+  border-radius: 0.4rem;
+  background: #357ab8;
+}
+.btn.small-btn:hover {
+  background: #295485;
+}
+.btn.outline {
+  background: transparent;
+  color: var(--blue-accent);
+  border: 2px solid var(--blue-accent);
+}
+.btn.primary {
+  background: var(--blue-accent);
+  color: var(--white);
+}
+.copy-btn {
+  background: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.97rem;
+  cursor: pointer;
+  font-weight: 500;
+  margin-left: auto;
+  margin-bottom: 20px;
+}
+.copy-btn:hover {
+  background: #219150;
+}
+.output-corrections-list ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* Dynamic Greeting (Message) */
+.smart-greeting {
+  max-width: 700px;
+  margin: 2rem auto 1.5rem auto;
+  background: #e6f1ff;
+  border-radius: 0.7rem;
+  padding: 1.1rem 2rem;
+  font-size: 1.17rem;
+  font-weight: 500;
+  color: #3b5a8a;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(65, 120, 192, 0.09);
+  letter-spacing: 0.03em;
+}
+
+/* Footer - Made by */
+.main-footer {
+  margin: 2.5rem auto 0 auto;
+  color: #4178c0;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  background: transparent;
+}
+
+
+
+/*────────────────────────────────────────────────────
+  Mobile Tweaks for EditorPage (≤600px)
+────────────────────────────────────────────────────*/
+@media (max-width: 600px) {
+  /* 1) Title Section: full-width inputs & suggestions centered */
+  .title-section {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+    gap: 0.5rem;
+    margin: 1.5rem auto;
+  }
+  .title-input {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+  }
+  .suggestions-list {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  /* 2) Smart Greeting: ضيق المسافات داخل البطاقة */
+  .smart-greeting {
+    margin: 1.5rem auto;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  /* 3) Textarea & Output Blocks: full-width وراحة التمرير */
+  .ai-textarea {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+  }
+  .output-with-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .output-with-copy textarea {
+    width: 100%;
+  }
+  .copy-btn {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  /* 4) Generated Content: stacking buttons عمودياً */
+  .generated-content-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  .generated-content-header .btn,
+  .generated-content-header .copy-btn {
+    width: 100%;
+    padding: 0.6rem 1rem;
+  }
+
+  /* 5) Actions Buttons: full-width and vertical spacing */
+  .content-actions {
+    flex-direction: column;
+    gap: 0.6rem;
+    margin: 1rem 0;
+  }
+  .btn,
+  .btn.outline,
+  .btn.primary {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  /* 6) Footer & No-change Msg: text-align center ومتناسق */
+  .no-change-msg {
+    font-size: 0.9rem;
+    margin: 1rem auto;
+    text-align: center;
+  }
+  .main-footer {
+    padding: 1rem 0;
+    font-size: 0.9rem;
+  }
+}
