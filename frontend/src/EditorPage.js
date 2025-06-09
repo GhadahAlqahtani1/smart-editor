@@ -1,8 +1,10 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback } from "react"; 
 import Header from "./Header";
 import "./EditorPage.css";
 import toast, { Toaster } from "react-hot-toast";
 import { motion } from "framer-motion";
+
+const BACKEND_URL = "https://smart-editor-backend.onrender.com";
 
 const greetings = [
   "👋 Welcome! Need help writing?",
@@ -48,7 +50,7 @@ export default function EditorPage() {
     }
     setIsSuggesting(true);
     try {
-      const res = await fetch("/api/generate-title", {
+      const res = await fetch(`${BACKEND_URL}/api/generate-title`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: content }),
@@ -78,7 +80,7 @@ export default function EditorPage() {
     setIsGenerating(true);
     setGeneratedContent("");
     try {
-      const res = await fetch("/api/generate-content", {
+      const res = await fetch(`${BACKEND_URL}/api/generate-content`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt: content }),
@@ -107,7 +109,7 @@ export default function EditorPage() {
     setShowSummary(true); // Show summary result area
     setIsSummarizing(true);
     try {
-      const res = await fetch("/api/generate-summary", {
+      const res = await fetch(`${BACKEND_URL}/api/generate-summary`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: content }),
@@ -130,7 +132,7 @@ export default function EditorPage() {
     setShowCorrections(true); // Show corrections area
     setIsCorrecting(true);
     try {
-      const res = await fetch("/api/check-grammar", {
+      const res = await fetch(`${BACKEND_URL}/api/check-grammar`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: content }),
