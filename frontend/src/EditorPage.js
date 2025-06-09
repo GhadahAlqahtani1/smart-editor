@@ -58,11 +58,7 @@ export default function EditorPage() {
       else if (data.title) setSuggestions([data.title]);
       else setSuggestions([]);
     } catch (err) {
-      setSuggestions([
-        "A Smart Start",
-        "How to Write with AI",
-        "Boost Your Blog",
-      ]);
+      setSuggestions(["A Smart Start", "How to Write with AI"]);
     } finally {
       setIsSuggesting(false);
     }
