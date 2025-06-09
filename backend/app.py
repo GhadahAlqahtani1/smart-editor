@@ -19,9 +19,8 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 # 2. دوال المساعد الذكي
 # ========================
 
-
 def openai_chat(prompt, system="You are a helpful assistant.", max_tokens=400):
-    client = openai.OpenAI(api_key="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")  # ضعي مفتاحك هنا بأمان
+    client = openai.OpenAI()  
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
