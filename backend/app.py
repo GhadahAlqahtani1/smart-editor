@@ -8,8 +8,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app, origins=["https://smart-editor-ten.vercel.app"])
-
+CORS(app, origins=[
+  "https://smart-editor-7w4ho4mdm-ghadahalqahtani1s-projects.vercel.app",
+  "https://smart-editor-ten.vercel.app"
+])
 
 # ========================
 # 1. إعداد الـ API KEY
@@ -119,4 +121,4 @@ def check_grammar_route():
 # ========================
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=7860)
