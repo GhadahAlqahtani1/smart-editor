@@ -4,7 +4,7 @@ import "./EditorPage.css";
 import toast, { Toaster } from "react-hot-toast";
 import { motion } from "framer-motion";
 
-const BACKEND_URL = "https://smart-editor-backend.onrender.com";
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
 const greetings = [
   "👋 Welcome! Need help writing?",
