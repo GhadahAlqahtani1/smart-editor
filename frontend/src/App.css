@@ -261,6 +261,9 @@ section {
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
+    opacity: 0;
+  animation: slideInUp 1s ease-out forwards;
+  animation-delay: 0.6s;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .hero-text button:hover {
