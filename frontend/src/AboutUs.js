@@ -129,15 +129,6 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* PATH TO SMARTER INTERACTIONS */}
-      <section className="path-section">
-        <h2>Your Path to Smarter Interactions</h2>
-        <div className="video-wrapper">
-          <img src={videoThumbnail} alt="Video demo" />
-          <button className="play-btn">▶</button>
-        </div>
-      </section>
-
       {/* FAQ */}
       <section className="faq-section">
         <h2>Get the Answers You Need</h2>

@@ -759,7 +759,7 @@ section {
     1. Hero Section 
   ────────────────────────────*/
   .HeroSection {
-    margin-top: 1rem !important; 
+    margin-top: 1.3rem !important; 
     display: flex;
     flex-direction: column;
     align-items: center;
