@@ -37,8 +37,12 @@ def openai_chat(prompt, system="You are a helpful assistant.", max_tokens=400):
 
 # 2.1. تلخيص نص
 def generate_summary(text: str) -> str:
-    prompt = f"Summarize the following blog post in 2-3 sentences:\n{text}"
-    return openai_chat(prompt, system="You summarize text in clear English.", max_tokens=150)
+    prompt = (
+        "Summarize the following blog post in **one to two short sentences only**. "
+        "Be as concise as possible. Do not add extra details.\n\n"
+        f"{text}"
+    )
+    return openai_chat(prompt, system="You summarize text in very concise English.", max_tokens=70)
 
 # 2.2. اقتراح عنوان
 def generate_title(text: str) -> str:
