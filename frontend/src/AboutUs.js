@@ -202,7 +202,7 @@ export default function AboutUs() {
             <a href="/">Help Center</a>
           </div>
         </div>
-        <p>© 2025 Smart Blog Editor. Designed by Ghadah.</p>
+        <p>© 2025 Smart Editor. Designed by Ghadah.</p>
       </footer>
     </main>
   );

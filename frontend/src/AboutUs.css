@@ -390,4 +390,28 @@ a.secondary-btn {
   .primary-btn {
     width: 100%;
   }
+  .footer-links {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+    text-align: left !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .footer-links > div {
+    width: 100% !important;
+    margin-bottom: 0.5rem;
+  }
+  .footer-links div h4 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+  .footer-links div a {
+    font-size: 0.96rem;
+    margin-bottom: 0.18rem;
+  }
+  .about-footer {
+    padding: 1.3rem 0.6rem !important;
+    font-size: 0.95rem;
+  }
 }
